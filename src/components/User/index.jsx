@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-export function User({ user }) {
+export function User({ user, userRepos }) {
   return (
     <Container>
       <img src={user.avatar_url} alt={user.name} />
@@ -9,7 +9,7 @@ export function User({ user }) {
       <p>{user.bio}</p>
       <section>
         <div>
-          <strong>12</strong>
+          <strong>{userRepos?.length}</strong>
           <span>Repositórios</span>
         </div>
 
