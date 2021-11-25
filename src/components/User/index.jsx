@@ -1,12 +1,12 @@
 import { Container } from './styles'
 
-export function User() {
+export function User({ user }) {
   return (
     <Container>
-      <img src='https://github.com/fabio-beutler.png' alt='Fabio Beutler' />
-      <h1>Fabio Beutler</h1>
-      <h2>fabio-beutler</h2>
-      <p>Bio do usuário</p>
+      <img src={user.avatar_url} alt={user.name} />
+      <h1>{user.name}</h1>
+      <h2>{user.login}</h2>
+      <p>{user.bio}</p>
       <section>
         <div>
           <strong>12</strong>
@@ -14,12 +14,12 @@ export function User() {
         </div>
 
         <div>
-          <strong>21</strong>
+          <strong>{user.followers}</strong>
           <span>Seguidores</span>
         </div>
 
         <div>
-          <strong>21</strong>
+          <strong>{user.following}</strong>
           <span>Seguindo</span>
         </div>
       </section>
