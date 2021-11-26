@@ -1,11 +1,11 @@
 import { FiArrowLeft } from 'react-icons/fi'
 import { Container } from './styles'
 
-export function ReposList({ user, userRepos }) {
+export function ReposList({ user, userRepos, setIsReposListActive }) {
   return (
     <Container>
       <div>
-        <button type='button'>
+        <button type='button' onClick={() => setIsReposListActive(false)}>
           <FiArrowLeft />
           Voltar
         </button>
