@@ -9,10 +9,13 @@ export const Container = styled.main`
   div {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
     padding: 1rem;
+    position: relative;
 
     button {
+      position: absolute;
+      left: 1rem;
       display: flex;
       align-items: center;
       color: var(--text-secondary);
