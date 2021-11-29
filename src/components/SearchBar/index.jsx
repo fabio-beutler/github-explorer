@@ -19,11 +19,9 @@ export function SearchBar({ setUser, setUserRepos }) {
           .get(`/${inputRef.current.value}/repos`)
           .then(response => setUserRepos(response.data))
       })
-      .catch(e => {
+      .catch(() => {
         setUser(null)
         setUserRepos(null)
-
-        console.log(e.response)
 
         toast.error('Usuário não encontrado', {
           position: 'top-center',
@@ -33,7 +31,8 @@ export function SearchBar({ setUser, setUserRepos }) {
           pauseOnHover: false,
           draggable: true,
           progress: undefined,
-          theme: 'dark'
+          theme: 'dark',
+          pauseOnFocusLoss: false
         })
       })
   }
@@ -52,17 +51,7 @@ export function SearchBar({ setUser, setUserRepos }) {
           <FiSearch />
         </button>
       </form>
-      <ToastContainer
-        position='top-center'
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable
-        pauseOnHover
-      />
+      <ToastContainer />
     </Container>
   )
 }
