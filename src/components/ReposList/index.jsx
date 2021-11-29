@@ -10,7 +10,7 @@ export function ReposList({ user, userRepos, setIsReposListActive }) {
           <FiArrowLeft />
           Voltar
         </button>
-        <h1>Repositórios de {user.name}</h1>
+        {user && <h1>Repositórios de {user.name}</h1>}
       </div>
 
       <ul>
