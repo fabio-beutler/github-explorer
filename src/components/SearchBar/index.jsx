@@ -39,32 +39,30 @@ export function SearchBar({ setUser, setUserRepos }) {
   }
 
   return (
-    <>
-      <Container>
-        <h1>Github Explorer</h1>
+    <Container>
+      <h1>Github Explorer</h1>
 
-        <form onSubmit={getUserData}>
-          <div>
-            <span>github.com/</span>
-            <input type='text' ref={inputRef} />
-          </div>
+      <form onSubmit={getUserData}>
+        <div>
+          <span>github.com/</span>
+          <input type='text' ref={inputRef} />
+        </div>
 
-          <button type='submit'>
-            <FiSearch />
-          </button>
-        </form>
-        <ToastContainer
-          position='top-center'
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss={false}
-          draggable
-          pauseOnHover
-        />
-      </Container>
-    </>
+        <button type='submit'>
+          <FiSearch />
+        </button>
+      </form>
+      <ToastContainer
+        position='top-center'
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+      />
+    </Container>
   )
 }
